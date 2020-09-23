@@ -3,7 +3,7 @@ import psycopg2
 class Database:
 	def __init__(self,db):
 		#self.conn=sqlite3.connect(db)
-		self.conn=psycopg2.connect(host="localhost",user="postgres",database="books",password="kenneth123")
+		self.conn=psycopg2.connect(host="localhost",user="postgres",database="database_name",password="yourpassword")
 		self.cur=self.conn.cursor()
 		self.cur.execute("CREATE TABLE IF NOT EXISTS assets(id SERIAL  PRIMARY KEY,description text,tag_number text UNIQUE ,serial_number text,category text,location text,cost integer)")
 		self.conn.commit()
