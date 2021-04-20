@@ -17,6 +17,12 @@ dice=['die1.png','die2.png','die3.png','die4.png','die5.png','die6.png',]
 DiceImage1=ImageTk.PhotoImage(Image.open(random.choice(dice)))
 DiceImage2=ImageTk.PhotoImage(Image.open(random.choice(dice)))
 
+frame1=tk.Frame(root,bg='blue')
+frame1.pack()
+
+frame2=tk.Frame(root,bg='green')
+frame2.pack()
+
 
 ImageLabel1=tk.Label(root,image=DiceImage1)
 ImageLabel1.image=DiceImage1
